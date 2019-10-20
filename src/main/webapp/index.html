@@ -8,12 +8,20 @@
 <body>
 <form class="decor" action="test" method="GET">
     <div class="form-inner">
-        <h3>Напиши нам:</h3>
-        <input type="text" placeholder="Имя" name="first">
-        <input type="text" placeholder="Фамилия" name="last">
-        <input type="email" placeholder="Email" name="mail">
-        <textarea class="message" type="text" placeholder="Your Message" name="mess"></textarea>
-        <input type="submit" value="Отправить">
+        <h3>Seppuku manifest:</h3>
+        <input type="text" placeholder="Имя" name="first" required autofocus>
+        <input type="text" placeholder="Фамилия" name="last" required>
+        <input type="text" placeholder="Email" name="mail" required>
+        <select name="dom">
+            <option disabled selected value="Chose mail">Chose mail inbox</option>
+            <option value="@gmail.com">@gmail</option>
+            <option value="@mail.ru">@mail</option>
+            <option value="@yandex.ru">@yandex</option>
+            <option value="@list.ru">@list</option>
+            <option></option>
+        </select>
+        <textarea class="message" type="text" placeholder="Your Message" name="mess" required></textarea>
+        <input type="submit" value="Отправить"> <input type="reset" value="Clear">
     </div>
 </form>
 </body>

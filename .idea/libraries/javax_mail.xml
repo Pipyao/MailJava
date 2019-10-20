@@ -1,9 +1,11 @@
 <component name="libraryTable">
   <library name="javax.mail">
     <CLASSES>
-      <root url="jar://$USER_HOME$/Downloads/javax.mail.jar!/" />
+      <root url="jar://D:/Program Files (x86)/javamail-1.4.5/javax.mail.jar!/" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="http://www.docjar.com/html/api/sun/security/jgss/HttpCaller.java.html" />
+    </JAVADOC>
     <SOURCES />
   </library>
 </component>

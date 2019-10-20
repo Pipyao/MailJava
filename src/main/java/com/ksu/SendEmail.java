@@ -10,16 +10,18 @@ public class SendEmail {
     private static String mail;
     private  static String first;
     private  static String last;
-    private  static String mess;
+    private  static String messtext;
 
-    public void Send(String Mail, String First, String Last, String Mess) {
+
+
+    public void Send(String Mail, String First, String Last, String MessText,String Dom) {
 
         first = First;
         last = Last;
-        mail = Mail;
-        mess = Mess;
-        final String username = "alabudabudaptap@gmail.com";
-        final String password = "1Qwerty123";
+        messtext = MessText;
+        mail = Mail + Dom;
+        final String username = "hovopro99@gmail.com";
+        final String password = "d6w299dr7h";
 
         Properties prop = new Properties();
         prop.put("mail.smtp.host", "smtp.gmail.com");
@@ -37,13 +39,13 @@ public class SendEmail {
         try {
 
             Message message = new MimeMessage(session);
-            message.setFrom(new InternetAddress("alabudabudaptap@gmail.com"));
+            message.setFrom(new InternetAddress("hovopro99@gmail.com"));
             message.setRecipients(
                     Message.RecipientType.TO,
-                    InternetAddress.parse(mail)
+                    InternetAddress.parse(SendEmail.mail)
             );
-            message.setSubject("Тестовое письмо");
-            message.setText("Здравствуйте, "+first+" "+last+", теперь у нас есть ваша почта\n"+mess);
+            message.setSubject("Welcome to the club buddy");
+            message.setText("Samurai, "+first+" "+last+" "+messtext+"");
 
             Transport.send(message);
 

@@ -1,11 +1,8 @@
 package com.ksu;
 
-import org.omg.CORBA.Request;
-import sun.security.jgss.HttpCaller;
+
 
 import java.io.IOException;
-import javax.mail.MessagingException;
-import javax.mail.internet.AddressException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -27,7 +24,8 @@ public class TestServlet extends HttpServlet {
         String first = request.getParameter("first");
         String last = request.getParameter("last");
         String mail = request.getParameter("mail");
-        String mess = request.getParameter("mess");
+        String messtext = request.getParameter("mess");
+        String dom = request.getParameter("dom");
 
         try {
 
@@ -41,13 +39,13 @@ public class TestServlet extends HttpServlet {
                     "<body>\n" +
                     "<form class=\"decor\" action=\"test\" method=\"GET\">\n" +
                     "    <div class=\"form-inner\">\n" +
-                    "        <h3>Мы свяжемся с тобой!</h3>\n" +
+                    "        <h3>There's no purpose for the samurai but the way</h3>\n" +
                     "    </div>\n" +
                     "</form>\n" +
                     "</body>\n" +
                     "</html>");
             SendEmail Mail = new SendEmail();
-            Mail.Send(mail,first,last, mess);
+            Mail.Send(mail,first,last, messtext,dom);
 
         } finally {
             writer.close();
