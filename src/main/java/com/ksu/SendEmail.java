@@ -14,12 +14,12 @@ public class SendEmail {
 
 
 
-    public void Send(String Mail, String First, String Last, String MessText,String Dom) {
+    public void Send(String sendto, String First, String Last, String MessText) {
 
         first = First;
         last = Last;
         messtext = MessText;
-        mail = Mail + Dom;
+        mail = sendto;
         final String username = "hovopro99@gmail.com";
         final String password = "d6w299dr7h";
 

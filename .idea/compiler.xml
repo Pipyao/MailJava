@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="11">
-      <module name="Jeep" target="11" />
+      <module name="Jeep" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>

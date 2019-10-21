@@ -26,6 +26,7 @@ public class TestServlet extends HttpServlet {
         String mail = request.getParameter("mail");
         String messtext = request.getParameter("mess");
         String dom = request.getParameter("dom");
+        String sendto = mail + dom;
 
         try {
 
@@ -45,7 +46,7 @@ public class TestServlet extends HttpServlet {
                     "</body>\n" +
                     "</html>");
             SendEmail Mail = new SendEmail();
-            Mail.Send(mail,first,last, messtext,dom);
+            Mail.Send(sendto,first,last, messtext);
 
         } finally {
             writer.close();
